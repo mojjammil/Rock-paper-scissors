@@ -1,40 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Rock Paper Scissors</title>
-  </head>
-  <body>
-<p style="strong" class="startMove">Select your move:</p>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <p class="startMove">Select your move</p>
+  <div class="full-width-container">
     <select class="dropdown" id="selectedMove">
       <option value="Rock">Rock</option>
       <option value="Paper">Paper</option>
       <option value="Scissors">Scissors</option>
     </select>
-    <button type="button" name="confirm" onclick="winner()">Confirm move</button>
-    <div class="AiSection">
+  </div>
+  <button type="button" name="confirm" onclick="winner()">Confirm move</button>
+  <div class="AiSection">
     <p>AI's move is <span id="AiChoice"></span> </p>
     <div id="result"></div>
-    </div>
-<style media="screen">
-  body  {
+  </div>
+  <style media="screen">
+    body  {
     text-align: center;
-    margin: 15%;
-    background-color: black;
+    margin: 20vh auto;
+    background-color: grey;
   }
 
   .startMove, .AiSection, .result {
     color: white;
     font-family: Verdana;
+    font-size: 3vh
   }
 
   .AiSection {
     padding: 2em 0em 0em 0em;
   }
+
+  #AiChoice {
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    background-color: black
+  }
+
+  select#selectedMove.dropdown {
+    height: 7vh;
+    font-size: 3vh;
+  }
+
+  button {
+    padding: .5em;
+    border: none;
+    border-radius: 25px;
+    font-size: 3vh;
+    font-weight: 600;
+    margin: 1em auto
+  }
+
+  @media only screen and (max-width: 400px) {
+    button {
+      width: 100%;
+    }
+  }
+
+  .full-width-container {
+    width: min-content;
+    margin: auto;
+    padding: 1em
+  }
+
+  #result {
+    background-color: yellow;
+    color: black;
+    font-weight: 600;
+    font-size: 1.5em;
+    width: 50vw;
+    margin: auto
+  }
 </style>
 
-<script type="text/javascript" src="rps.js">
+  <script type="text/javascript" src="rps.js">
 
-</script>
-  </body>
+  </script>
+</body>
+
 </html>
